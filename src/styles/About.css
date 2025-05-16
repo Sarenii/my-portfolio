@@ -1,0 +1,42 @@
+
+/* src/styles/About.css */
+.about-section {
+  padding: 60px 20px;
+  background-color: var(--brand-light-sage); 
+}
+
+.about-content-wrapper { 
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--brand-white); 
+  padding: 30px 40px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+}
+
+.about-section .section-title { /* Ensuring title has good contrast on new bg */
+    color: var(--brand-deep-green); /* Or var(--brand-white) if bg was darker */
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--brand-charcoal);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 20px;
+  }
+  .about-content-wrapper {
+    padding: 25px;
+  }
+  .about-text p {
+    font-size: 1.05rem;
+  }
+}

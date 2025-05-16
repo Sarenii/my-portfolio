@@ -1,0 +1,189 @@
+
+/* src/styles/Projects.css */
+.projects-section {
+  padding: 60px 20px 80px;
+  /* UPDATED: Section background to light-sage */
+  background-color: var(--brand-light-sage); 
+}
+
+.projects-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Global .section-title will be used */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+}
+
+.project-card {
+  background-color: var(--brand-white); 
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: 1px solid var(--brand-light-gray);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+.project-card-summary {
+  padding: 25px 30px 20px;
+}
+
+.project-name {
+  font-family: var(--font-headings);
+  font-size: 1.7rem;
+  color: var(--brand-deep-green);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.project-role {
+  font-size: 0.9rem;
+  color: var(--brand-olive-accent);
+  margin-bottom: 15px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.project-summary-text {
+  font-size: 1rem;
+  color: var(--brand-charcoal);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  min-height: 70px;
+}
+
+.project-links-minimal {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.project-link-minimal {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-link-minimal.live {
+  background-color: var(--brand-deep-green);
+  color: var(--brand-white);
+}
+.project-link-minimal.live:hover {
+  background-color: var(--brand-olive-accent);
+  box-shadow: var(--shadow-light);
+}
+
+.project-link-minimal.repo {
+  background-color: transparent;
+  color: var(--brand-deep-green);
+  border: 2px solid var(--brand-deep-green);
+}
+.project-link-minimal.repo:hover {
+  background-color: var(--brand-deep-green);
+  color: var(--brand-white);
+  box-shadow: var(--shadow-light);
+}
+
+.learn-more-button {
+  display: inline-block;
+  background-color: var(--brand-sage-green);
+  color: var(--brand-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  width: auto;
+  margin-top: 10px;
+}
+
+.learn-more-button:hover {
+  background-color: var(--brand-olive-accent);
+  transform: translateY(-2px);
+}
+
+.project-card-details {
+  padding: 20px 30px 25px;
+  /* UPDATED: Details section background to a lighter cream for distinction on sage bg */
+  background-color: var(--brand-cream); 
+  border-top: 2px solid var(--brand-light-sage);
+  animation: fadeInDetails 0.5s ease-in-out;
+}
+
+@keyframes fadeInDetails {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.project-subtitle {
+  font-family: var(--font-headings);
+  font-size: 1.3rem;
+  color: var(--brand-deep-green);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.project-details-list {
+  list-style: disc;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--brand-charcoal);
+}
+
+.project-details-list li {
+  margin-bottom: 8px;
+}
+
+.project-overview-detail-text {
+  font-size: 0.95rem;
+  color: var(--brand-charcoal);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.project-tech-details {
+  font-size: 0.9rem;
+  color: var(--brand-olive-accent);
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--brand-light-gray);
+  font-weight: 500;
+}
+
+.project-tech-details strong {
+  color: var(--brand-deep-green);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .project-name {
+    font-size: 1.5rem;
+  }
+  .project-summary-text {
+      min-height: auto;
+  }
+}

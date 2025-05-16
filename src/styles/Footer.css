@@ -1,0 +1,77 @@
+
+/* src/styles/Footer.css */
+
+.footer {
+  background-color: var(--brand-charcoal);
+  color: var(--brand-light-gray);
+  padding: 40px 20px; 
+  text-align: center;
+}
+
+.footer-content-wrapper { 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 1rem; 
+  margin-bottom: 20px;
+  color: var(--brand-cream);
+}
+
+.footer-social-links {
+  margin-bottom: 20px;
+}
+
+.footer-social-link {
+  color: var(--brand-light-gray);
+  margin: 0 12px; 
+  text-decoration: none;
+  font-size: 1.1rem; 
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-social-link:hover {
+  color: var(--brand-sage-green);
+}
+
+.footer-social-link svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.footer-nav {
+    margin-bottom: 20px;
+}
+
+.footer-nav-link {
+    color: var(--brand-light-gray);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+    color: var(--brand-sage-green);
+}
+
+.footer-copyright {
+  font-size: 0.9rem; 
+  color: var(--brand-sage-green);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+  .footer-text, .footer-nav-link {
+    font-size: 0.9rem;
+  }
+  .footer-copyright {
+    font-size: 0.85rem;
+  }
+}

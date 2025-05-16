@@ -1,0 +1,162 @@
+/* src/styles/Hero.css */
+
+
+.hero-section {
+  background: linear-gradient(to bottom, var(--brand-cream), var(--brand-light-sage));
+  padding: 60px 20px; 
+  text-align: left; 
+  min-height: auto; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid var(--brand-sage-green);
+}
+
+.hero-content-grid { 
+  max-width: 1100px; 
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; 
+  gap: 40px; 
+  align-items: center; 
+}
+
+.hero-text-content {
+  /* No specific styles needed, it's a grid item */
+}
+
+.hero-name {
+  font-family: var(--font-headings);
+  font-size: 3.2rem; 
+  color: var(--brand-deep-green);
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.hero-title {
+  font-family: var(--font-primary);
+  font-size: 1.7rem; 
+  color: var(--brand-olive-accent);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-intro {
+  font-size: 1.1rem; 
+  color: var(--brand-charcoal);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start; 
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-button {
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: var(--shadow-light);
+}
+
+.hero-button.primary {
+  background-color: var(--brand-deep-green);
+  color: var(--brand-white);
+  border: 2px solid var(--brand-deep-green);
+}
+
+.hero-button.primary:hover {
+  background-color: var(--brand-olive-accent);
+  border-color: var(--brand-olive-accent);
+  color: var(--brand-white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.hero-button.secondary {
+  background-color: transparent;
+  color: var(--brand-deep-green);
+  border: 2px solid var(--brand-deep-green);
+}
+
+.hero-button.secondary:hover {
+  background-color: var(--brand-deep-green);
+  color: var(--brand-white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.hero-image-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.hero-photo {
+  max-width: 100%; 
+  height: auto;
+  border-radius: var(--border-radius-lg); 
+  box-shadow: var(--shadow-strong); 
+  object-fit: cover; 
+  max-height: 400px; /* You can adjust this */
+  border: 4px solid var(--brand-white); 
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { 
+  .hero-content-grid {
+    grid-template-columns: 1fr; 
+    text-align: center; 
+    gap: 30px;
+  }
+  .hero-image-container {
+    order: -1; 
+    margin-bottom: 20px; 
+  }
+  .hero-photo {
+    max-width: 300px; 
+    margin: 0 auto; 
+  }
+  .hero-buttons {
+    justify-content: center; 
+  }
+  .hero-section {
+    padding: 60px 20px;
+  }
+  .hero-name {
+    font-size: 2.8rem;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) { 
+  .hero-name {
+    font-size: 2.2rem;
+  }
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  .hero-photo {
+    max-width: 220px; /* Further reduced for small mobile */
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .hero-button {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px 20px;
+  }
+}
