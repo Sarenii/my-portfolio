@@ -75,3 +75,49 @@
     font-size: 0.85rem;
   }
 }
+
+/* src/styles/Footer.css */
+/* ... (previous styles from portfolio_final_styles_v4/v5 remain the same) ... */
+
+.footer-social-links {
+  margin-bottom: 20px;
+  display: flex; /* Added for centering icons */
+  justify-content: center; /* Center icons */
+  gap: 20px; /* Space between icons */
+}
+
+.footer-social-icon { /* New style specifically for icon links */
+  color: var(--brand-light-gray);
+  text-decoration: none;
+  font-size: 1.8rem; /* Make icons larger */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-icon:hover {
+  color: var(--brand-sage-green);
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+ /* Remove or comment out .footer-social-link if you replaced text links with icons */
+/*
+.footer-social-link {
+  color: var(--brand-light-gray);
+  margin: 0 12px; 
+  text-decoration: none;
+  font-size: 1.1rem; 
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-social-link:hover {
+  color: var(--brand-sage-green);
+}
+*/
+
+.footer-social-link svg { /* This would be for inline SVGs if not using react-icons components */
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    vertical-align: middle;
+}
+/* ... (rest of the styles, including media queries, remain the same) ... */

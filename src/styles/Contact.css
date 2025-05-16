@@ -79,3 +79,53 @@
     justify-content: center;
   }
 }
+/* src/styles/Contact.css */
+/* ... (previous styles from portfolio_final_styles_v4/v5 remain the same) ... */
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--brand-white);
+  padding: 12px 20px; /* Adjusted padding slightly */
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-icon { /* New style for icons */
+  margin-right: 10px;
+  font-size: 1.3em; /* Relative to parent font size */
+  vertical-align: middle; /* Helps with alignment */
+}
+
+.contact-link:hover {
+  background-color: var(--brand-sage-green);
+  color: var(--brand-deep-green);
+  transform: translateY(-3px);
+}
+
+/* ... (rest of the styles, including media queries, remain the same) ... */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 50px 20px 60px;
+  }
+  .contact-intro {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+  }
+  .contact-links-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-link {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center; /* Center content (icon + text) */
+    padding: 12px 15px; /* Adjust padding if needed */
+  }
+}
