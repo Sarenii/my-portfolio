@@ -28,7 +28,7 @@ const softwareProjectsData = [
         "Fully responsive design for optimal viewing on all devices."
     ],
     technologies: "React.js, CSS, Django REST Framework (DRF), PostgreSQL, Dj-rest-auth, Supabase, Vercel, GitHub Actions",
-    liveLink: "https://matakiri-Ims-vercel.vercel.app/",
+    liveLink: "https://matakiri-lms-vercel.vercel.app/",
     repoLink: "https://github.com/Sarenii/matakiri-Ims-vercel.git"
   },
   {
