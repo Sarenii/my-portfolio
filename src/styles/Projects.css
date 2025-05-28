@@ -1,9 +1,8 @@
-
 /* src/styles/Projects.css */
 .projects-section {
   padding: 60px 20px 80px;
-  /* UPDATED: Section background to light-sage */
-  background-color: var(--brand-light-sage); 
+  background-color: var(--brand-light-sage);
+  color: var(--brand-charcoal);
 }
 
 .projects-content-wrapper {
@@ -11,21 +10,61 @@
   margin: 0 auto;
 }
 
-/* Global .section-title will be used */
+/* --- Project Tabs --- */
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 15px;
+}
 
+.tab-button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-primary, sans-serif);
+  border: 2px solid var(--brand-olive-accent);
+  background-color: var(--brand-white);
+  color: var(--brand-olive-accent);
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.tab-button:hover {
+  background-color: var(--brand-olive-accent);
+  color: var(--brand-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.tab-button.active {
+  background-color: var(--brand-deep-green);
+  color: var(--brand-white);
+  border-color: var(--brand-deep-green);
+  box-shadow: var(--shadow-medium);
+}
+
+/* --- Projects Grid --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 35px;
+  align-items: start; /* ADDED THIS LINE: Prevents items from stretching to tallest in row */
 }
 
+/* --- Project Card --- */
 .project-card {
-  background-color: var(--brand-white); 
+  background-color: var(--brand-white);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-medium);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   border: 1px solid var(--brand-light-gray);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -35,6 +74,9 @@
 
 .project-card-summary {
   padding: 25px 30px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-name {
@@ -58,9 +100,11 @@
   color: var(--brand-charcoal);
   line-height: 1.7;
   margin-bottom: 20px;
+  flex-grow: 1;
   min-height: 70px;
 }
 
+/* --- Project Links (Minimal) & Learn More Button --- */
 .project-links-minimal {
   margin-bottom: 20px;
   display: flex;
@@ -77,14 +121,18 @@
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .project-link-minimal.live {
   background-color: var(--brand-deep-green);
   color: var(--brand-white);
+  border: 2px solid var(--brand-deep-green);
 }
 .project-link-minimal.live:hover {
   background-color: var(--brand-olive-accent);
+  border-color: var(--brand-olive-accent);
+  color: var(--brand-white);
   box-shadow: var(--shadow-light);
 }
 
@@ -112,19 +160,20 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
   width: auto;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .learn-more-button:hover {
   background-color: var(--brand-olive-accent);
+  color: var(--brand-white);
   transform: translateY(-2px);
 }
 
+/* --- Project Card Details (Expanded View) --- */
 .project-card-details {
   padding: 20px 30px 25px;
-  /* UPDATED: Details section background to a lighter cream for distinction on sage bg */
-  background-color: var(--brand-cream); 
-  border-top: 2px solid var(--brand-light-sage);
+  background-color: var(--brand-cream);
+  border-top: 1px solid var(--brand-light-gray);
   animation: fadeInDetails 0.5s ease-in-out;
 }
 
@@ -141,11 +190,15 @@
   margin-bottom: 10px;
   font-weight: 600;
 }
+.project-card-details > *:first-child .project-subtitle,
+.project-card-details > .project-subtitle:first-child {
+    margin-top: 0;
+}
 
 .project-details-list {
   list-style: disc;
   padding-left: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--brand-charcoal);
@@ -159,7 +212,7 @@
   font-size: 0.95rem;
   color: var(--brand-charcoal);
   line-height: 1.7;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .project-tech-details {
@@ -175,15 +228,68 @@
   color: var(--brand-deep-green);
 }
 
+/* --- UI/UX Showcase Image --- */
+.project-showcase-image-container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.project-card-details > .project-showcase-image-container:first-child {
+    margin-top: 0;
+}
+
+.project-showcase-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md, 8px);
+  border: 1px solid var(--brand-light-gray);
+  box-shadow: var(--shadow-light);
+}
+
+/* --- Media Queries --- */
 @media (max-width: 768px) {
+  .project-tabs {
+    gap: 10px;
+  }
+  .tab-button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
   .projects-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; /* Already set by auto-fit on smaller viewport */
     gap: 25px;
   }
   .project-name {
     font-size: 1.5rem;
   }
   .project-summary-text {
-      min-height: auto;
+    min-height: auto;
+  }
+  .project-card-summary {
+    padding: 20px 25px 15px;
+  }
+  .project-card-details {
+    padding: 15px 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tab-button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .tab-button:last-child {
+    margin-bottom: 0;
+  }
+  .project-link-minimal {
+    width: 100%;
+  }
+  .learn-more-button {
+    width: 100%;
   }
 }
