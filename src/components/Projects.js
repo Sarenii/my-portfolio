@@ -31,6 +31,30 @@ const softwareProjectsData = [
     liveLink: "https://somanasi.org/",
     repoLink: "https://github.com/Sarenii/matakiri-Ims-vercel.git"
   },
+   { 
+        id: "smart-word-ai", 
+        name: "SMART WORD AI", 
+        role: "Full-Stack Developer", 
+        summary: "A modern, AI-enhanced web platform designed to help users deepen their understanding of the Bible by integrating AI-driven insights with shared human experiences.", 
+        achievements: [ 
+            "Architected and developed the complete frontend from scratch using React.js and Tailwind CSS.",
+            "Engineered a dynamic and responsive UI with light/dark theme modes for optimal user experience.",
+            "Integrated the American Bible Society's API (api.bible) to fetch and display various Bible versions, books, and chapters dynamically.",
+            "Implemented a fully interactive and searchable Bible reader with chapter-by-chapter navigation.",
+            "Established a CI/CD pipeline with GitHub Actions for automated deployments to Vercel."
+        ], 
+        mainFunctionalities: [ 
+            "Interactive Bible reader with searchable dropdowns for version, book, and chapter selection.",
+            "Seamless next/previous chapter navigation.",
+            "Thematic topic exploration page with search functionality.",
+            "Community page for users to read and share personal testimonies (UI).",
+            "Engaging trivia section with multiple categories (UI).",
+            "Fully responsive design with persistent light and dark themes."
+        ], 
+        technologies: "React.js, Tailwind CSS, Bible API (api.bible), Vercel, GitHub Actions", 
+        liveLink: "https://smart-word-ai.vercel.app/#", // Replace with your actual Vercel link if different
+        repoLink: "https://github.com/Sarenii/Smart-Word-AI" // Replace with your actual repo link if different
+    },
   {
     id: "harmosoft-web",
     name: "Harmosoft Company Website",
